@@ -27,13 +27,15 @@ public class ChatServlet extends HttpServlet {
 
     private static final XMPPService xmppService = XMPPServiceFactory.getXMPPService();
 
+    private static final String help = "Accepted commands: help , <date><code> 8 8 8 8 8";
+
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Message message = xmppService.parseMessage(req);
         Message reply = new MessageBuilder()
                 .withRecipientJids(message.getFromJid())
                 .withMessageType(MessageType.NORMAL)
-                .withBody(message.getBody())
+                .withBody(help)
                 .build();
         xmppService.sendMessage(reply);
     }
