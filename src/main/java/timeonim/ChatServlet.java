@@ -27,7 +27,7 @@ public class ChatServlet extends HttpServlet {
 
     private static final XMPPService xmppService = XMPPServiceFactory.getXMPPService();
 
-    private static final String help = "Accepted commands: help , <date><code> 8 8 8 8 8";
+    private static final String help = "Accepted commands: help , <code> 8 8 8 8 8";
 
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
