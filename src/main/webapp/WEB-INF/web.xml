@@ -8,8 +8,16 @@
         <servlet-name>chat</servlet-name>
         <servlet-class>timeonim.ChatServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>subscription</servlet-name>
+        <servlet-class>timeonim.SubscriptionServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>chat</servlet-name>
         <url-pattern>/_ah/xmpp/message/chat/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>subscription</servlet-name>
+        <url-pattern>/_ah/xmpp/subscription/subscribe/</url-pattern>
     </servlet-mapping>
 </web-app>

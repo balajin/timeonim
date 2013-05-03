@@ -10,6 +10,7 @@
 
     <inbound-services>
         <service>xmpp_message</service>
+        <service>xmpp_subscribe</service>
     </inbound-services>
 
 </appengine-web-app>
